@@ -1,30 +1,3 @@
-# Assignment_4
-
-## problem1
-
-![problem1](imgs/image.png)
-
-### input
-
-> 图片中的输入应该是5 1 ···
-
-读入两个整数N，M，分别表示匹配模式的数量和单词的数量
-
-读入M行，每行对应一个匹配模式，匹配模式用 vector<string> patterns 存储
-
-读入N行，每行对应一个待匹配的单词，单词用 vector<string> words 存储
-
-### output
-
-对于每个单词，打印一行，其中包含按升序排列的匹配单词模版的编号，每个数字后面
-
-都有一个空格。如果没有与单词模版与之匹配，请打印“Not match”
-
-
-
-### code
-
-```C++
 #include <iostream>
 #include <vector>
 #include <string>
@@ -105,6 +78,3 @@ int main() {
 
     return 0;
 }
-```
-
-
