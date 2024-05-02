@@ -22,14 +22,15 @@ bool isMatch(const string& word, const string& pattern) {
             wildcardMatchIndex = wordIndex; // 记录当前匹配到的位置
             ++patternIndex; // 跳过 '*'
         }
-        // 如果当前字符不匹配且没有 '*' 可以匹配
+        // 如果当前字符不匹配且有 '*' 可以匹配
         else if (wildcardIndex != -1) {
             patternIndex = wildcardIndex + 1; // 回退到 '*' 的下一个位置
             wordIndex = ++wildcardMatchIndex; // 回退到上一个匹配的位置的下一个位置
         }
         // 如果当前字符不匹配且没有 '*' 可以匹配，且没有 '*' 的情况下，直接返回 false
-        else
-            return false;
+        else return false;
+
+        cout << patternIndex << " " << wordIndex << " " << wildcardIndex << " " << wildcardMatchIndex << endl;
     }
 
     // 如果模板字符还有剩余，但是单词已经匹配完了
