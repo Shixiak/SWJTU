@@ -8,7 +8,7 @@
 
 > 图片中的输入应该是5 1 ···
 
-读入两个整数N，M，分别表示匹配模式的数量和单词的数量
+读入两个整数N(int)，M(int)，分别表示匹配模式的数量和单词的数量
 
 读入M行，每行对应一个匹配模式，匹配模式用 vector<string> patterns 存储
 
@@ -87,7 +87,6 @@ assignment
 #include <iostream>
 #include <vector>
 #include <string>
-#include <algorithm>
 
 using namespace std;
 
@@ -126,7 +125,6 @@ bool isMatch(const string& word, const string& pattern) {
 }
 
 int main() {
-    freopen("data.in", "r", stdin);
     int N, M;
     cin >> N >> M;
 
@@ -153,8 +151,6 @@ int main() {
         if (matches.empty())
             cout << "Not match" << endl;
         else {
-            // 排序并输出匹配的模板编号
-            sort(matches.begin(), matches.end());
             for (int i : matches)
                 cout << i << " ";
             cout << endl;

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <algorithm>
 
 using namespace std;
 
@@ -69,8 +68,6 @@ int main() {
         if (matches.empty())
             cout << "Not match" << endl;
         else {
-            // 排序并输出匹配的模板编号
-            sort(matches.begin(), matches.end());
             for (int i : matches)
                 cout << i << " ";
             cout << endl;
