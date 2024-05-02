@@ -215,6 +215,7 @@ void dfs(int x, int block) {
 输入：11（即 N = 11）
 
 算法执行过程中关键变量的值随dfs调用的变化
+
 ![simulation](imgs/simulation_4_3.png)
 
 ### Code
