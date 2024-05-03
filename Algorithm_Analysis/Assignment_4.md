@@ -167,11 +167,130 @@ int main() {
 
 ### Algorithm solution idea
 
+该算法的主要思想是使用深度优先搜索（DFS）生成了所有可能的长度为n的排列，然后对每个排列进行检查，计算其能够组成的对数（满足一定条件），最后统计满足条件的排列个数。
+
+具体来说，算法的主要步骤包括：
+
+使用DFS生成所有长度为n的排列，保存在二维向量arranges中。
+定义了一个辅助函数isCombine()，用于判断数组中的两个数是否能组成一对。
+在主函数中，遍历所有生成的排列，对于每个排列，计算其能够组成的对数（满足一定条件），并统计满足条件的排列个数。
+输出满足条件的排列个数。
+主要的关键点在于使用DFS生成所有排列，然后利用条件判断计算每个排列能够组成的对数，最后统计满足条件的排列个数。
+
 ### Pseuocode
+
+```C++
+arranges = []  // 保存所有排列
+fcount = 0    // 统计排列个数
+
+// 深度搜索求全排列
+procedure dfs(cur, n, a, vis):
+    if cur == n + 1:
+        arranges.push_back(a)
+        fcount++
+        return
+    for i from 1 to n:
+        if not vis[i]:
+            a[cur] = i
+            vis[i] = 1
+            dfs(cur + 1, n, a, vis)
+            vis[i] = 0
+
+// 判断两个数是否能组成一对
+function isCombine(start, end, num):
+    num1 = num[start]
+    num2 = num[end]
+    while start < end - 1:
+        if num1 < num[start + 1] or num2 < num[start + 1]:
+            return false
+        start++
+    return true
+
+// 主函数
+function main():
+    read n, m from input
+    a = array of size n + 1
+    vis = array of size n + 1 initialized with 0
+    dfs(1, n, a, vis)
+
+    result = 0
+    for i from 0 to fcount - 1:
+        mcount = n - 1
+        for j from 1 to n - 2:
+            for k from j + 2 to n:
+                mcount += isCombine(j, k, arranges[i])
+        if mcount == m:
+            result++
+    
+    output result
+```
 
 ### Steps
 
+![simulation_4_2](imgs/simulation_4_2.png)
+
 ### Code
+
+```C++
+#include <iostream>
+#include <vector>
+using namespace std;
+
+#define MAXN 9
+#define MAXM 1000000
+
+int fcount = 0;
+vector<vector<int>> arranges;
+
+// 深度搜索求全排列
+void dfs(int cur, int n, vector<int>& a, vector<int>& vis) {
+    if (cur == n + 1) {
+        arranges.push_back(a);
+        fcount++;
+        return;
+    }
+    for (int i = 1; i <= n; i++) {
+        if (!vis[i]) {
+            a[cur] = i;
+            vis[i] = 1;
+            dfs(cur + 1, n, a, vis);
+            vis[i] = 0;
+        }
+    }
+}
+
+// 判断两个数是否能组成一对
+bool isCombine(int start, int end, vector<int>& num) {
+    int num1 = num[start], num2 = num[end];
+    while (start < end - 1) {
+        if (num1 < num[start + 1] || num2 < num[start + 1]) return false;
+        start++;
+    }
+    return true;
+}
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+
+    // 对数组进行全排列
+    vector<int> a(n + 1), vis(n + 1, 0);
+    dfs(1, n, a, vis);
+
+    int result = 0;
+    for (int i = 0; i < fcount; i++) {
+        int mcount = n - 1;
+        for (int j = 1; j <= n - 2; j++)
+            for (int k = j + 2; k <= n; k++)
+                mcount += isCombine(j, k, arranges[i]);
+        if (mcount == m) result++;
+    }
+
+    cout << result;
+    return 0;
+}
+
+```
 
 ## Problem3
 
@@ -243,12 +362,10 @@ void dfs(int x, int block) {
 }
 
 int main() {
-    cout << "请输入积木数N：" << endl;
     cin >> N;
     ans = 0;
     dfs(N, N);
-    cout << "总的楼梯搭建方法为：" << ans << endl;
-
+    cout << ans << endl;
     return 0;
 }
 ```
