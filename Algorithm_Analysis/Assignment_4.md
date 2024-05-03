@@ -347,7 +347,6 @@ int N, ans;
 int count = 0;
 
 void dfs(int x, int block) {
-    cout << ++count << " " << x << " " << block << " "<< ans << endl;
     if (block == 0) {
         ans++;
         return;
