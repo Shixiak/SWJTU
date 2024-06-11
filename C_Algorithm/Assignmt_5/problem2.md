@@ -30,14 +30,14 @@
 
 ##### 样例输入
 
-bwwb
-bbwb
-bwwb
+bwwb  
+bbwb  
+bwwb  
 bwww
 
 ##### 样例输出
 
-
+4
 
 ##### 要求
 
@@ -52,4 +52,8 @@ bwww
 （5） 设计一组测试数据，验证上述程序的正确性，给出验证过程。（20 分）
 
 #### 解空间树
+
+![alt text](pics/p2_sample_1_solu_tree.png)
+
+#### 
 
