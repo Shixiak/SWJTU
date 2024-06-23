@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\sh1x1ak\Documents\SWJTU\C_Computer_Organization_Expr\zsx_Course_Design\simulation\qsim
+vComputer
+Z1 !s100 TmdME]kG4hXLaldl<>1HR3
+Z2 I?EhY=g9O^4QX8PJkDzH?T0
+Z3 V=kfg;njD?[bL2A99B7KL63
+Z4 dC:\Users\sh1x1ak\Documents\SWJTU\C_Computer_Organization_Expr\zsx_Course_Design\simulation\qsim
+Z5 w1718802706
+Z6 8zsx_Course_Design.vo
+Z7 Fzsx_Course_Design.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|zsx_Course_Design.vo|
+Z10 o-work work -O0
+Z11 n@computer
+!i10b 1
+!s85 0
+Z12 !s108 1718802706.987000
+Z13 !s107 zsx_Course_Design.vo|
+!s101 -O0
+vComputer_vlg_check_tst
+!i10b 1
+Z14 !s100 <Oo7Pi=D6n;=bQ3eO^6882
+Z15 I?f];4I`P4La;g;H2<H^J=0
+Z16 V_J0I]QlU[Kk[]THlg`D^T3
+R4
+Z17 w1718802705
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z20 !s108 1718802707.062000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z23 n@computer_vlg_check_tst
+vComputer_vlg_sample_tst
+!i10b 1
+Z24 !s100 L]IcMR[_1eLL56F]?Um5_0
+Z25 IXNni0cC^G3B1CA0odB@aa3
+Z26 Vd>O@=m5JZLl55c5Hc>NlY1
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@computer_vlg_sample_tst
+vComputer_vlg_vec_tst
+!i10b 1
+!s100 EJImEUTmII`7^3[:?DCn50
+I4j[PHUcN;zH0_5>GjE<U10
+Z28 V:VBomL]IlZ8;Efz`R76KH2
+R4
+R17
+R18
+R19
+Z29 L0 771
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@computer_vlg_vec_tst

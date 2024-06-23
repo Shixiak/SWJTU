@@ -147,7 +147,7 @@ void init() {
 
 void BackTracking(int startIndex, int curCnt) {
     if (startIndex == sites.size()) {
-        result = max(result, curCnt);
+        result = min(result, curCnt);
         return;
     }
     vector<int> freqs(curCnt+1, 0);
